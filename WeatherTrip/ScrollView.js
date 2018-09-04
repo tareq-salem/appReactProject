@@ -2,12 +2,7 @@ import React from 'react';
 import { StyleSheet, ScrollView } from 'react-native';
 
 export default class ScrollView extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-            saisie: "Saisir un texte..."
-        }
-    }
+
     render() {
         return (
             <ScrollView style={styles.container}>

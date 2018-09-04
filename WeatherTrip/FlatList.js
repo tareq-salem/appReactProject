@@ -1,13 +1,8 @@
 import React from 'react';
-import { StyleSheet, View, TextInput, FlatList } from 'react-native';
+import { StyleSheet, View, FlatList } from 'react-native';
 
-export default class TextInput extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-            saisie: "Saisir un texte..."
-        }
-    }
+export default class FlatList extends React.Component {
+
     render() {
         const arr = [1,2,3,4,5];
         const arr2 = [9,8,7,6,5];
@@ -19,14 +14,21 @@ export default class TextInput extends React.Component {
         return (
             <View style={styles.container}>
                 {elements}
-                
+
                 <FlatList
+                data={arr}
+                renderItem={({item}) => {
+                    return (
+                        <Text>{item}</Text>
+                    )}}
+            />
+{/*                <FlatList
                     data={arr}
-                    renderItem={({item}) => {
+                    renderItem={(param) => {
                         return (
-                            <Text>{item}</Text>
+                            <Text>{param.item}</Text>
                         )}}
-                />
+                />*/}
             </View>
         );
     }
