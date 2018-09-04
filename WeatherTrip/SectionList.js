@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, SectionList } from 'react-native';
 
-export default class TextInput extends React.Component {
+export default class SectionList extends React.Component {
 
     render() {
         const arr = [1,2,3,4,5];
