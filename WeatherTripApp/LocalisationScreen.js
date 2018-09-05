@@ -1,12 +1,11 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import Menu from "./components/Menu";
+import {createMaterialBottomTabNavigator} from 'react-navigation';
 
-export default class App extends React.Component {
+export default class LocalisationScreen extends React.Component {
     render() {
         return (
-                <Menu/>
-
+            <Text>LOCALISATION</Text>
         );
     }
 }
@@ -19,3 +18,5 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
 });
+
+
