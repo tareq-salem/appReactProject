@@ -1,11 +1,12 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import {createMaterialBottomTabNavigator} from 'react-navigation';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default class MeteoScreen extends React.Component {
     render() {
         return (
             <Text>METEO</Text>
+
         );
     }
 }
