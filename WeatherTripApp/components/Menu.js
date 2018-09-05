@@ -3,9 +3,9 @@ import {StyleSheet} from 'react-native';
 // import {createBottomTabNavigator} from 'react-navigation';
 import {createMaterialBottomTabNavigator} from 'react-navigation-material-bottom-tabs';
 
-import MeteoScreen from "./MeteoScreen";
-import LocalisationScreen from "./LocalisationScreen";
-import FavorisScreen from "./FavorisScreen";
+import MeteoScreen from "../MeteoScreen";
+import LocalisationScreen from "../LocalisationScreen";
+import FavorisScreen from "../FavorisScreen";
 
 export default class Menu extends React.Component {
     render() {

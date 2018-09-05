@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import Menu from "./Menu";
+import Menu from "./components/Menu";
 
 export default class App extends React.Component {
     render() {
