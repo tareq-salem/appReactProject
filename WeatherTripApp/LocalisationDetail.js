@@ -3,16 +3,14 @@ import {StyleSheet, Text, View, Button} from 'react-native';
 import LocalisationResult from './LocalisationResult';
 
 export default class LocalisationDetail extends React.Component {
+
+    static navigationOptions = {
+        title: 'Détails',
+    };
+
     render() {
         return (
             <View style={styles.container}>
-                <Text>LOCALISATION DETAIL</Text>
-                <Button
-                    title={"Retour"}
-                    onPress={() => {
-                        this.props.navigation.navigate("LocalisationResult");
-                    }}
-                />
             </View>
         );
     }

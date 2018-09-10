@@ -10,35 +10,77 @@ import FavorisList from '../FavorisList';
 import FavorisDetail from '../FavorisDetail';
 
 
-export const LocalisationStack = createStackNavigator({
-    LocalisationSearch: {
-        screen: LocalisationSearch
+export const LocalisationStack = createStackNavigator(
+    {
+        LocalisationSearch: {
+            screen: LocalisationSearch
+        },
+        LocalisationResult: {
+            screen: LocalisationResult
+        },
+        LocalisationDetail: {
+            screen: LocalisationDetail
+        },
     },
-    LocalisationResult: {
-        screen: LocalisationResult
-    },
-    LocalisationDetail: {
-        screen: LocalisationDetail
+    {
+        initialRouteName: 'LocalisationSearch',
+        navigationOptions: {
+            headerStyle: {
+                backgroundColor: '#23a844',
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+                fontWeight: 'bold',
+            },
+        }
     }
-});
+);
 
-export const MeteoStack = createStackNavigator({
-    MeteoSearch: {
-        screen: MeteoSearch
+export const MeteoStack = createStackNavigator(
+    {
+        MeteoSearch: {
+            screen: MeteoSearch
+        },
+        MeteoResult: {
+            screen: MeteoResult
+        },
+        MeteoDetail: {
+            screen: MeteoDetail
+        },
     },
-    MeteoResult: {
-        screen: MeteoResult
-    },
-    MeteoDetail: {
-        screen: MeteoDetail
+    {
+        initialRouteName: 'MeteoSearch',
+        navigationOptions: {
+            headerStyle: {
+                backgroundColor: '#23a844',
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+                fontWeight: 'bold',
+            },
+        }
     }
-});
+);
 
-export const FavorisStack = createStackNavigator({
-    FavorisList: {
-        screen: FavorisList
+export const FavorisStack = createStackNavigator(
+    {
+        FavorisList: {
+            screen: FavorisList
+        },
+        FavorisDetail: {
+            screen: FavorisDetail
+        },
     },
-    FavorisDetail: {
-        screen: FavorisDetail
-    },
-});
+    {
+        initialRouteName: 'MeteoSearch',
+        navigationOptions: {
+            headerStyle: {
+                backgroundColor: '#23a844',
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+                fontWeight: 'bold',
+            },
+        }
+    }
+);

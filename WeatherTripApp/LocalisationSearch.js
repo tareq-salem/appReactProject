@@ -3,10 +3,14 @@ import {StyleSheet, Text, View, Button} from 'react-native';
 import LocalisationResult from './LocalisationResult';
 
 export default class LocalisationSearch extends React.Component {
+
+    static navigationOptions = {
+        title: 'WeatherTrip',
+    };
+
     render() {
         return (
             <View style={styles.container}>
-                <Text>LOCALISATION SEARCH</Text>
                 <Button
                     title={"Rechercher"}
                     onPress={() => {

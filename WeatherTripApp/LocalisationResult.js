@@ -4,16 +4,14 @@ import LocalisationSearch from './LocalisationSearch';
 import LocalisationDetail from './LocalisationDetail';
 
 export default class LocalisationResult extends React.Component {
+
+    static navigationOptions = {
+        title: 'Résultats',
+    };
+
     render() {
         return (
             <View style={styles.container}>
-                <Text>LOCALISATION RESULT</Text>
-                <Button
-                    title={"Retour"}
-                    onPress={() => {
-                        this.props.navigation.navigate("LocalisationSearch");
-                    }}
-                />
                 <Button
                     title={"Détail"}
                     onPress={() => {
