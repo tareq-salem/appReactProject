@@ -5,22 +5,22 @@ import {createMaterialBottomTabNavigator} from 'react-navigation-material-bottom
 
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-import MeteoScreens from "../MeteoScreens";
-import LocalisationScreens from "../LocalisationScreens";
-import FavorisScreens from "../FavorisScreens";
+import {MeteoStack} from "./StackNavigation";
+import {LocalisationStack} from "./StackNavigation";
+import {FavorisStack} from "./StackNavigation";
 
 export default class Menu extends React.Component {
     render() {
         const tintColor = '#ffffff';
         const MenuScreen = createBottomTabNavigator({
                 Meteo: {
-                    screen: MeteoScreens,
+                    screen: MeteoStack,
                 },
                 Localisation: {
                     screen: LocalisationStack,
                 },
                 Favoris: {
-                    screen: FavorisScreens
+                    screen: FavorisStack
                 }
             },
             {
