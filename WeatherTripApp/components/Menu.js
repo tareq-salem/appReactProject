@@ -17,7 +17,7 @@ export default class Menu extends React.Component {
                     screen: MeteoScreens,
                 },
                 Localisation: {
-                    screen: LocalisationScreens,
+                    screen: LocalisationStack,
                 },
                 Favoris: {
                     screen: FavorisScreens
@@ -45,7 +45,7 @@ export default class Menu extends React.Component {
                     activeBackgroundColor: '#23a844',
                     inactiveBackgroundColor: '#23a844',
                     showLabel: false,
-                    tabStyle: {borderColor: '#99a89d', borderWidth: 0.5, borderStyle: 'solid',}
+                    // tabStyle: {borderColor: '#99a89d', borderWidth: 0.5, borderStyle: 'solid',}
                 },
             });
         return (
@@ -64,4 +64,3 @@ export default class Menu extends React.Component {
         },
     });
 }
-

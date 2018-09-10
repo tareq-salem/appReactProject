@@ -1,9 +1,24 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import {createMaterialBottomTabNavigator} from 'react-navigation';
+import {createStackNavigator} from 'react-navigation';
 
-export default class LocalisationScreen extends React.Component {
+import LocalisationSearch from './LocalisationSearch';
+import LocalisationResult from './LocalisationResult';
+import LocalisationDetail from './LocalisationDetail';
+
+export class LocalisationScreen extends React.Component {
     render() {
+        const LocalisationStack = createStackNavigator({
+    LocalisationSearch: {
+        screen: LocalisationSearch
+    },
+    LocalisationResult: {
+        screen: LocalisationResult
+    },
+    LocalisationDetail: {
+        screen: LocalisationDetail
+    }
+});
         return (
             <Text>LOCALISATION</Text>
         );
@@ -18,5 +33,3 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
 });
-
-
