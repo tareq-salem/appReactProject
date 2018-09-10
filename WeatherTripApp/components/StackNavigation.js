@@ -24,6 +24,7 @@ export const LocalisationStack = createStackNavigator(
     },
     {
         initialRouteName: 'LocalisationSearch',
+        headerLayoutPreset: 'center',
         navigationOptions: {
             headerStyle: {
                 backgroundColor: '#23a844',
@@ -50,6 +51,7 @@ export const MeteoStack = createStackNavigator(
     },
     {
         initialRouteName: 'MeteoSearch',
+        headerLayoutPreset: 'center',
         navigationOptions: {
             headerStyle: {
                 backgroundColor: '#23a844',
@@ -72,7 +74,8 @@ export const FavorisStack = createStackNavigator(
         },
     },
     {
-        initialRouteName: 'MeteoSearch',
+        initialRouteName: 'FavorisList',
+        headerLayoutPreset: 'center',
         navigationOptions: {
             headerStyle: {
                 backgroundColor: '#23a844',

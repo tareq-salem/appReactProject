@@ -5,7 +5,7 @@ import LocalisationResult from './LocalisationResult';
 export default class LocalisationSearch extends React.Component {
 
     static navigationOptions = {
-        title: 'WeatherTrip',
+        title: 'Localisation',
     };
 
     render() {

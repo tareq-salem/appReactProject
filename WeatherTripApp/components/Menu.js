@@ -41,7 +41,7 @@ export default class Menu extends React.Component {
                 }),
                 tabBarOptions: {
                     activeTintColor: '#ffffff',
-                    inactiveTintColor: '#99a89d',
+                    inactiveTintColor: '#24773a',
                     activeBackgroundColor: '#23a844',
                     inactiveBackgroundColor: '#23a844',
                     showLabel: false,
