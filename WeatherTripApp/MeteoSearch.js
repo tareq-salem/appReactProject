@@ -24,7 +24,7 @@ export default class MeteoSearch extends React.Component {
                 <View style={{flex: 1, justifyContent: 'flex-end', marginTop: 50, marginBottom: 10,}}>
                     <Text>Tapez le nom d'une ville ou un code postal</Text>
                 </View>
-                <View style={{flex: 1, justifyContent: 'flex-start', marginBottom: 10}}>
+                <View style={{flex: 1, justifyContent: 'flex-start'}}>
                     <TextInput
                         style={styles.textInput}
                         autoCorrect={false}
@@ -34,8 +34,9 @@ export default class MeteoSearch extends React.Component {
                         onChangeText={(text) => this.setState({inputValue: text,})}
                         >
                         </TextInput>
+                        <Text style={styles.errorMessage}>{this.state.errorMessage}</Text>
                     </View>
-                    <View style={{flex: 8}}>
+                    <View style={{flex: 8, justifyContent: 'flex-start', marginTop: 40}}>
                         <Button
                             title={"Rechercher"}
                             onPress={() => {
@@ -44,13 +45,16 @@ export default class MeteoSearch extends React.Component {
                                         errorMessage: "Veuillez écrire au moins 3 caractères",
                                     })
                                 } else {
+                                    this.setState({
+                                        errorMessage: "",
+                                    })
                                     MeteoAPI.APIrequest(this.state.inputValue);
                                     this.props.navigation.navigate("MeteoResult");
                                 }
                             }}
                             color={'#23a844'}
                         />
-                        <Text style={styles.errorMessage}>{this.state.errorMessage}</Text>
+
                     </View>
                 </View>
             );
@@ -72,7 +76,8 @@ export default class MeteoSearch extends React.Component {
             paddingLeft: 10,
         },
         errorMessage: {
-            marginTop: 50,
+            marginTop: 10,
+            alignItems: 'center',
             color: 'red',
         },
     });
