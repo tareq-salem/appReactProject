@@ -16,9 +16,16 @@ export default class MeteoAPI {
         try {
             let response = await fetch(url);
             let responseJson = await response.json();
-            return console.warn(responseJson);
+            if (responseJson.cod == 400) {
+                console.warn('Aucun résultat. Veuillez ressayer avec ');
+            }
+            return (
+                responseJson,
+                console.warn(responseJson)
+            );
         } catch (error) {
             console.warn(error);
+            return "Il semble qu'il y ait un problème..."
         }
 
     }
