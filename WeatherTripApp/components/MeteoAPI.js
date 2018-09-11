@@ -6,12 +6,10 @@ export default class MeteoAPI {
         const nbResult = 10;
 
         if (isNaN(input)) {
-            console.warn("test1");
-            url = 'api.openweathermap.org/data/2.5/forecast?q=' + input
+            url = 'http://api.openweathermap.org/data/2.5/forecast?q=' + input
             + ',fr&cnt=' + nbResult + '&units=metric&lang=fr&APPID=' + APIkey;
         } else {
-            console.warn("test2");
-            url = 'api.openweathermap.org/data/2.5/forecast?zip=' + input
+            url = 'http://api.openweathermap.org/data/2.5/forecast?zip=' + input
             + ',fr&cnt=' + nbResult + '&units=metric&lang=fr&APPID=' + APIkey;
         }
 
@@ -20,7 +18,7 @@ export default class MeteoAPI {
             let responseJson = await response.json();
             return console.warn(responseJson);
         } catch (error) {
-            console.error(error);
+            console.warn(error);
         }
 
     }
