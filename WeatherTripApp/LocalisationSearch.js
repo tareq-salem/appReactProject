@@ -1,21 +1,21 @@
 import React from 'react';
-import {StyleSheet, Text, View, Button} from 'react-native';
+import {StyleSheet, Text, View, Button, Image, TouchableOpacity, Picker, Modal, TouchableHighlight, SectionList, TouchableWithoutFeedback } from 'react-native';
 import LocalisationResult from './LocalisationResult';
 
 export default class LocalisationSearch extends React.Component {
 
     constructor(props) {
         super(props);
-        this.soleil = require("./soleil.png");
-        this.pluie = require("./pluie.png");
-        this.neige = require("./neige.png");
+        this.soleil = require("./img/soleil.png");
+        this.pluie = require("./img/pluie.png");
+        this.neige = require("./img/neige.png");
         this.state = {
           distance: '',
           meteo: '',
           temperature: '',
           modalVisible: false,
           values: "",
-          icone: require("./meteo.png")
+          icone: require("./img/meteo.png")
         }
       }
 
@@ -51,7 +51,7 @@ export default class LocalisationSearch extends React.Component {
               
               <Text style={{flex: 1, marginLeft: 10}} >Une fois la géolocalisation activée, vous pourrez retrouver des lieux qui vous correspondent tout près de chez vous !</Text>
               <TouchableOpacity style={styles.button} onPress={this.onPress}>
-                <Image style={{width: 30, height: 30, marginRight: 10}} source={require('./location.png')} />
+                <Image style={{width: 30, height: 30, marginRight: 10}} source={require('./img/location.png')} />
               </TouchableOpacity>
     
             </View>
