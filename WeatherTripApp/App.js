@@ -1,12 +1,16 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import Menu from "./components/Menu";
 import MeteoAPI from "./components/MeteoAPI";
+import SplashScreen from './components/SplashScreen';
 
 export default class App extends React.Component {
     render() {
         return (
+            <View style={styles.container}>
+                {/* <SplashScreen/> */}
                 <Menu/>
+            </View>
         );
     }
 }
@@ -14,8 +18,5 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
     },
 });

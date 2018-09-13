@@ -3,7 +3,6 @@ import {StyleSheet, Text, View, Button, TextInput} from 'react-native';
 
 import MeteoResult from './MeteoResult';
 import MeteoAPI from './components/MeteoAPI'
-import {haveInternetConnection} from './components/haveInternetConnection';
 
 export default class MeteoSearch extends React.Component {
     constructor() {
@@ -47,9 +46,19 @@ export default class MeteoSearch extends React.Component {
                                 } else {
                                     this.setState({
                                         errorMessage: "",
+                                    });
+                                    MeteoAPI.APIrequest(this.state.inputValue).then((requestResult) => {
+                                        if (requestResult.cod === "404") {
+                                            this.setState({
+                                                errorMessage: "Aucun résultat. Veuillez essayer à nouveau",
+                                            })
+                                        } else {
+                                            this.setState({
+                                                errorMessage: "",
+                                            })
+                                            this.props.navigation.navigate("MeteoResult", {requestResult: requestResult,});
+                                        }
                                     })
-                                    MeteoAPI.APIrequest(this.state.inputValue);
-                                    this.props.navigation.navigate("MeteoResult");
                                 }
                             }}
                             color={'#23a844'}
