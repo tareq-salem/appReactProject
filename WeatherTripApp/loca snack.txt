@@ -63,12 +63,7 @@ export default class LocalisationSearch extends React.Component {
         </Text>
         <TouchableOpacity
           onPress={() => {
-            Geolocalisation.getLocation().then((position) => {
-              if (position === "Location services are disabled") {
-                alert('Veuillez activer le GPS')}
-                else {
-                  alert("Position enregistrée");
-                }});
+            Geolocalisation.getLocation();
           }}>
           <Image
             style={{ width: 30, height: 30, marginRight: 10 }}
@@ -147,14 +142,8 @@ export default class LocalisationSearch extends React.Component {
             <Button
                         title={"Rechercher"}
                         onPress={() => {
-                          Geolocalisation.getLocation().then((position) => {
-                              if (position === "Location services are disabled") {
-                                alert('Veuillez activer le GPS')}
-                              else {
-                                this.props.navigation.navigate("LocalisationResult", {position: position})
-                               }})}} 
-                        color="green"
-            />
+                            this.props.navigation.navigate("LocalisationResult", {location: location});
+                        }} color="green"/>
             </View>
           </View>
         );
