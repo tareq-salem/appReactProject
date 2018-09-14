@@ -24,11 +24,7 @@ export default class App extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                {/* <SplashScreen/>
-                <Menu/> */}
                 { (this.state.isVisible === true) ? <SplashScreen/>  : <Menu/> }
-                {/* <View style={{backgroundColor: 'red'}}></View>
-                <View style={{backgroundColor: 'blue'}}></View> */}
             </View>
         );
     }
