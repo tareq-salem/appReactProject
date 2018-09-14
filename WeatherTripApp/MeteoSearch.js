@@ -2,7 +2,8 @@ import React from 'react';
 import {StyleSheet, Text, View, Button, TextInput} from 'react-native';
 
 import MeteoResult from './MeteoResult';
-import MeteoAPI from './components/MeteoAPI'
+import MeteoAPI from './components/MeteoAPI';
+import MeteoLocAPI from './components/MeteoLocAPI';
 
 export default class MeteoSearch extends React.Component {
     constructor() {
@@ -47,6 +48,8 @@ export default class MeteoSearch extends React.Component {
                                     this.setState({
                                         errorMessage: "",
                                     });
+                                    // MeteoLocAPI.getBoundingBox([45.7748924, 4.7991982], 10)
+
                                     MeteoAPI.APIrequest(this.state.inputValue).then((requestResult) => {
                                         if (requestResult.cod === "404") {
                                             this.setState({
