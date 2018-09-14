@@ -13,9 +13,9 @@ export default class MeteoLocAPI {
     * @author Alex Salisbury
     */
 
-    static getBoundingBox(centerPoint, distance) {
+    static getBoundingBox(centerPoint, distance, zoom) {
         var MIN_LAT, MAX_LAT, MIN_LON, MAX_LON, R, radDist, degLat, degLon, radLat, radLon, minLat, maxLat, minLon, maxLon, deltaLon;
-        let zoom = 10;
+
         if (distance < 0) {
             return 'Illegal arguments';
         }
@@ -77,7 +77,7 @@ export default class MeteoLocAPI {
     };
 
 
-    static async APIrequest(box, zoom) {
+    static async APIrequest(box) {
         let url = "";
         const APIkey = "18f844a061787db37859728df7a7a978";
         const lonLatFormat = box[0] + "," + box[1] + "," + box[2] + "," + box[3]
