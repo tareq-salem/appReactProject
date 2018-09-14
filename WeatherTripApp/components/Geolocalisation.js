@@ -1,8 +1,5 @@
 export default class Geolocalisation {
     constructor() {
-      this.lon = "";
-      this.lat = "";
-      this.location = "";
 
     }
 
@@ -20,7 +17,9 @@ export default class Geolocalisation {
         } catch (error) {
           return "Location services are disabled";
         }
-      }
+    } else {
+        return "Please accept the permission";
+    }
 
 
 
